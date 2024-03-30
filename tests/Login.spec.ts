@@ -1,1 +1,1 @@
-import {test} from '@playwright/test';
+import {test,Page} from '@playwright/test';
