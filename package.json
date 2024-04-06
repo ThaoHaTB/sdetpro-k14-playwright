@@ -2,9 +2,14 @@
   "name": "sdetpro-k14-playwright",
   "version": "1.0.0",
   "description": "SDETPRO K14, playwright",
-  "scripts": {},
-  "devDependencies": {
-    "@playwright/test": "^1.42.1",
-    "@types/node": "^20.12.2"
+  "scripts": {
+    "test": "playwright test  --headed",
+    "ui": "playwright test --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "1.42.1"
   }
 }
