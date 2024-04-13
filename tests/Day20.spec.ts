@@ -57,7 +57,7 @@ test('Mouse hover and narowdown searching scope', async ({page}) => {
     
 });
 
-test.only('Checking element status and handle dynamic states', async ({page}) => {
+test('Checking element status and handle dynamic states', async ({page}) => {
     await page.goto('https://the-internet.herokuapp.com/dynamic_controls');
   
     //Locate 2 parent components
