@@ -27,3 +27,5 @@ export default class LoginPageMethod02 {
     }
 
 }
+
+// trả vể locator only, sử dụng khi muốn thực hiện nhiều interaction trên 1 element

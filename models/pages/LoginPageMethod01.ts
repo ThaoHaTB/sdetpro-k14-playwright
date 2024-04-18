@@ -27,3 +27,5 @@ export default class LoginPageMethod01 {
     }
     
 }
+
+// Sử dụng khi thiết kế một component chỉ có 1 interaction
