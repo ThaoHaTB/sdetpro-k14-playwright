@@ -1,5 +1,5 @@
 import {Page} from "@playwright/test";
-import SearchComponent from "../components/SearchComponent";
+import HeaderComponent from "../components/global/header/HeaderComponent";
 import ProductItemComponent from "../components/ProductItemComponent";
 
 export default class HomePage {
@@ -8,8 +8,8 @@ export default class HomePage {
         this.page = page;
     }
 
-    searchComponent(): SearchComponent {
-        return new SearchComponent(this.page.locator(SearchComponent.selector));
+    headerComponent(): HeaderComponent {
+        return new HeaderComponent(this.page.locator(HeaderComponent.selector));
     }
 
     async productItemComponentList(): Promise<ProductItemComponent[]> {
