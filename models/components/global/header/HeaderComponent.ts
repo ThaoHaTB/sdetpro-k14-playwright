@@ -8,7 +8,7 @@ export default class HeaderComponent {
     constructor(private component: Locator) {
         this.component = component;
     }
-
+    // Component in Parent component
     searchComponent(): SearchComponent {
         return new SearchComponent(this.component.locator(SearchComponent.selector));
     }

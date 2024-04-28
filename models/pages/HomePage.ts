@@ -1,6 +1,7 @@
 import {Page} from "@playwright/test";
 import HeaderComponent from "../components/global/header/HeaderComponent";
-import ProductItemComponent from "../components/ProductItemComponent";
+import PageBodyComponent from "../components/PageBodyComponent";
+import FooterComponent from "../components/global/footer/FooterComponent";
 
 export default class HomePage {
 
@@ -12,9 +13,10 @@ export default class HomePage {
         return new HeaderComponent(this.page.locator(HeaderComponent.selector));
     }
 
-    async productItemComponentList(): Promise<ProductItemComponent[]> {
-        const productItemComponents = await this.page.locator(ProductItemComponent.selector).all();
-        return productItemComponents.map(comp => new ProductItemComponent(comp));
+    pageBodyComponent(): PageBodyComponent {
+        return new PageBodyComponent(this.page.locator(PageBodyComponent.selector));
     }
-
+    footerComponent(): FooterComponent {
+        return new FooterComponent(this.page.locator(FooterComponent.selector));
+    }
 }
