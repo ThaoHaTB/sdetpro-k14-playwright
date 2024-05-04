@@ -35,7 +35,14 @@ const PAGES = [
 let randomNumber = Math.floor(Math.random() * PAGES.length);
 const { pageName, slug } = PAGES[randomNumber];
 
-test.only(`Test Footer component on ${pageName}`, async ({page}) => {
+// test.only(`Test Footer component on ${pageName}`, async ({page}) => {
+//     console.log(pageName);
+//     await page.goto(BASE_URL.concat(slug));
+//     const footerTestFlow: FooterTestFlow = new FooterTestFlow(page);
+//     await footerTestFlow.verifyFooterComponent();
+// })
+
+test.only('Test Footer component on random page', async ({page}) => {
     console.log(pageName);
     await page.goto(BASE_URL.concat(slug));
     const footerTestFlow: FooterTestFlow = new FooterTestFlow(page);
