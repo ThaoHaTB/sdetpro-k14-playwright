@@ -3,7 +3,7 @@ import HomePage from "../models/pages/HomePage";
 import ProductItemComponent from "../models/components/ProductItemComponent";
 import PageBodyComponent from '../models/components/PageBodyComponent';
 
-test.only('Test List of Component in Page', async ({page}) => {
+test('Test List of Component in Page', async ({page}) => {
 
     await page.goto('https://demowebshop.tricentis.com/');
     const homePage: HomePage = new HomePage(page);
