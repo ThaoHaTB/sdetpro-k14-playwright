@@ -19,7 +19,8 @@ const PAGES = [
 
 PAGES.forEach(page => {
     const {pageName, slug} = page;
-    test(`Test Footer component on ${pageName}`, async ({page}) => {
+    test('Test Footer component on page', async ({page}) => {
+        console.log(pageName);
         await page.goto(BASE_URL.concat(slug));
         const footerTestFlow: FooterTestFlow = new FooterTestFlow(page);
         await footerTestFlow.verifyFooterComponent();
