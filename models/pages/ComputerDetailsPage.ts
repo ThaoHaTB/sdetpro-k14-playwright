@@ -17,7 +17,7 @@ export default class ComputerDetailsPage {
     }
 
     public headerComponent(): HeaderComponent {
-        return new HeaderComponent(this.page.locator(HeaderComponent.selector));
+        return new HeaderComponent(this.page.locator(HeaderComponent.selectorValue));
     }
 
     computerComp<Tun extends ComputerEssentialComponent>(

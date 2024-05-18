@@ -1,9 +1,9 @@
 import {Locator} from "@playwright/test";
 import ProductItemComponent from "./ProductItemComponent";
+import { selector } from "./SelectorDecorator";
 
+@selector(".page-body")
 export default class PageBodyComponent {
-
-    public static selector: string = ".page-body";
     private header: string='.title';
 
     constructor(private component: Locator) {

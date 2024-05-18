@@ -1,8 +1,9 @@
 import {Locator, Page} from "@playwright/test";
+import { selector } from "../../SelectorDecorator";
 
+@selector(".search-box")
 export default class SearchComponent {
-
-    public static selector = '.search-box';
+    public static selector = '';
 
     private searchBoxLoc = 'input[id="small-searchterms"]';
     private searchBtnLoc = 'input[class*="search-box-button"]';

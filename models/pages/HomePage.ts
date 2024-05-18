@@ -10,13 +10,13 @@ export default class HomePage {
     }
 
     headerComponent(): HeaderComponent {
-        return new HeaderComponent(this.page.locator(HeaderComponent.selector));
+        return new HeaderComponent(this.page.locator(HeaderComponent.selectorValue));
     }
 
     pageBodyComponent(): PageBodyComponent {
-        return new PageBodyComponent(this.page.locator(PageBodyComponent.selector));
+        return new PageBodyComponent(this.page.locator(PageBodyComponent.selectorValue));
     }
     footerComponent(): FooterComponent {
-        return new FooterComponent(this.page.locator(FooterComponent.selector));
+        return new FooterComponent(this.page.locator(FooterComponent.selectorValue));
     }
 }
