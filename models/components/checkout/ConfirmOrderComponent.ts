@@ -1,10 +1,9 @@
 import {selector} from "../SelectorDecorator";
 import {Locator} from "@playwright/test";
 
-@selector(".cart-footer .totals")
-export default class TotalComponent {
+@selector("#opc-confirm_order")
+export default class ConfirmOrderComponent {
     protected component: Locator;
-
     private priceTableRowSel = 'table tr';
     private priceTypeSel = '.cart-total-left span';
     private priceValueSel = '.cart-total-right .product-price';

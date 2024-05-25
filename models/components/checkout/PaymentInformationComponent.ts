@@ -1,10 +1,9 @@
 import {selector} from "../SelectorDecorator";
 import {Locator} from "@playwright/test";
+import BaseCheckoutComponent from "./BaseChecoutComponent";
 
-@selector(".cart-footer .totals")
-export default class TotalComponent {
-    protected component: Locator;
-
+@selector("#opc-payment_info")
+export default class PaymentInformationComponent extends BaseCheckoutComponent{
     private priceTableRowSel = 'table tr';
     private priceTypeSel = '.cart-total-left span';
     private priceValueSel = '.cart-total-right .product-price';
@@ -12,7 +11,7 @@ export default class TotalComponent {
     private checkoutBtnSel = '#checkout';
 
     protected constructor(component: Locator) {
-        this.component = component;
+        super(component);
     }
 
     public async priceCategories(): Promise<any> {
